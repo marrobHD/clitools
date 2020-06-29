@@ -1,5 +1,6 @@
 #!/bin/bash
 # How to use: wget -qO- CLITools.tk/install-speedtest | bash
+# or wget -qO- speedtestcli.tk | bash
 
 cd ~
 res1=$(date +%s.%N)
