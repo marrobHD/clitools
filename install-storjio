@@ -78,7 +78,7 @@ fi
 
 echo
 # Install docker and docker compose via script 
-wget -qO- https://raw.githubusercontent.com/marrobHD/clitools/master/install-docker>temp.sh && chmod +x temp.sh && ./temp.sh
+wget -qO- https://raw.githubusercontent.com/marrobHD/clitools/master/install-docker | bash
 
 # optional: install and enable livepatch on your system
 if [ "$LPTOKEN" != "nul" ]
@@ -91,7 +91,7 @@ then
 	echo ----------------------------------------------------------
 	echo
 else
-	exit
+	echo
 fi
 
 echo
