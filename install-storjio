@@ -152,8 +152,8 @@ identity create storagenode || exit 1
 identity authorize storagenode $STORJTOKEN
 fi
 
-grep -c BEGIN ~/.local/share/storj/identity/storagenode/ca.cert | grep -q '2' && echo matched || echo mismatched; exit
-grep -c BEGIN ~/.local/share/storj/identity/storagenode/identity.cert | grep -q '3' && echo matched || echo mismatched; exit
+grep -c BEGIN ~/.local/share/storj/identity/storagenode/ca.cert | grep -q '2' && echo matched || echo mismatched || exit
+grep -c BEGIN ~/.local/share/storj/identity/storagenode/identity.cert | grep -q '3' && echo matched || echo mismatched && echo please abort! CTR+C|| exit
 
 
 echo
