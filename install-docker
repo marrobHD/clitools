@@ -23,7 +23,5 @@ sudo sh -c "curl -L https://raw.githubusercontent.com/docker/compose/${COMPOSE_V
 
 # Install docker-cleanup command
 cd /tmp
-wget "https://raw.githubusercontent.com/marrobHD/clitools/master/docker-cleanup"
-sudo mv docker-cleanup /usr/local/bin/docker-cleanup
+sudo sh -c "curl -L https://raw.githubusercontent.com/marrobHD/clitools/master/docker-cleanup > /usr/local/bin/docker-cleanup"
 sudo chmod +x /usr/local/bin/docker-cleanup
-# sudo rm /tmp/docker-cleanup
