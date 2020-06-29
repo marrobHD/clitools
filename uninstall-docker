@@ -1,3 +1,4 @@
+# wget -qO- CLITools.tk/uninstall-docker | bash
 # Remove docker compose
 sudo rm $(which docker-compose)
 sudo pip uninstall docker-compose
