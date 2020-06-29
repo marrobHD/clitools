@@ -1,5 +1,5 @@
 # CLITools.tk
-📦 A collection of scripts that I and others wrote for Proxmox 📦
+📦Scripts for CLI running under Debian/Ubuntu📦
 
 
 [![License][license-shield]](LICENSE.md)
@@ -20,17 +20,19 @@
 <!-- also includes... -->
 
 
-### Install Storjio on Debian/Ubuntu
-Installs Storjio on Debian/Ubuntu | Tested ?
+### Install Storjio-Storagenode on Debian/Ubuntu
+Installs a Storjio-Storagenode on Debian/Ubuntu | Tested Ubuntu 20.04
 * Download the [script](CLITools.tk/install-storjio)  
-```wget -qO- CLITools.tk/install-storjio>>install-storjio```
+```wget -qO- CLITools.tk/install-storjio>install-storjio```
 * Make the script executable and run it ```chmod +x install-storjio; ./install-storjio STORJTOKEN LIVEPATCHTOKEN(optional)```
 
-
+### Install Speedtest.net CLI on Debian/Ubuntu
+Installs Speedtest.net CLI on Debian/Ubuntu | Tested Ubuntu 20.04
+* Download the [script](CLITools.tk/install-speedtest)  
+```wget -qO- CLITools.tk/install-speedtest>install-speedtest```
+* Make the script executable and run it ```chmod +x install-speedtest; ./install-speedtest STORJTOKEN LIVEPATCHTOKEN(optional)```
 
 ### Sources
-
-
 
 
 Feel free to post issues and contribute!
