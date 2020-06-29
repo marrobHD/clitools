@@ -23,7 +23,7 @@
 ### Install Storjio on Debian/Ubuntu
 Installs Storjio on Debian/Ubuntu | Tested ?
 * Download the [script](CLITools.tk/install-storjio)  
-```wget -qO- CLITools.tk/install-storjio.sh>>install-storjio```
+```wget -qO- CLITools.tk/install-storjio>>install-storjio```
 * Make the script executable and run it ```chmod +x install-storjio; ./install-storjio STORJTOKEN LIVEPATCHTOKEN(optional)```
 
 
