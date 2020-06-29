@@ -1,5 +1,5 @@
 #!/bin/bash
-# How to use: wget -qO- CLITools.tk/install-storjio.sh>install-storjio && chmod +x install-storjio && ./install-storjio STORJTOKEN LIVEPATCHTOKEN(optional)
+# How to use: wget -qO- CLITools.tk/install-storjio>install-storjio && chmod +x install-storjio && ./install-storjio STORJTOKEN LIVEPATCHTOKEN(optional)
 # You can't directly wget it and run it with bash: wget xy | bash !
 # Don't run the script with sudo!
 cd ~
