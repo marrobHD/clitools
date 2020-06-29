@@ -1,5 +1,5 @@
 #!/bin/bash
-# How to use: wget -qO- CLITools.tk/install-speedtest>install-speedtest && chmod +x install-speedtest && ./install-speedtest)
+# How to use: wget -qO- CLITools.tk/install-speedtest | bash
 
 cd ~
 res1=$(date +%s.%N)
