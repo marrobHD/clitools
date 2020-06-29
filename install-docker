@@ -26,4 +26,4 @@ cd /tmp
 wget "https://raw.githubusercontent.com/marrobHD/clitools/master/docker-cleanup"
 sudo mv docker-cleanup /usr/local/bin/docker-cleanup
 sudo chmod +x /usr/local/bin/docker-cleanup
-sudo rm /tmp/docker-cleanup
+# sudo rm /tmp/docker-cleanup
