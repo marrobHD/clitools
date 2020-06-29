@@ -26,7 +26,7 @@ Installs a Storjio-Storagenode on Debian/Ubuntu | Tested Ubuntu 20.04
 ```wget -qO- CLITools.tk/install-storjio>install-storjio```
 * Make the script executable and run it ```chmod +x install-storjio; ./install-storjio STORJTOKEN LIVEPATCHTOKEN(optional)```
 
-### Install Speedtest.net CLI on Debian/Ubuntu
+### Install Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS
 Installs Speedtest.net CLI on Debian/Ubuntu | Tested Ubuntu 20.04
 * Download the [script](CLITools.tk/install-speedtest) and run it
 ```wget -qO- speedtestcli.tk | bash``` or
