@@ -20,6 +20,9 @@ echo
 echo Installation has been started
 echo ----------------------------------------------------------
 
+# Script only works if sudo caches the password for a few minutes
+sudo true
+
 UBUNTU=$(lsb_release -si)
 
 apt-get install sudo
