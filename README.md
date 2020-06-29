@@ -28,7 +28,8 @@ Installs a Storjio-Storagenode on Debian/Ubuntu | Tested Ubuntu 20.04
 
 ### Install Speedtest.net CLI on Debian/Ubuntu
 Installs Speedtest.net CLI on Debian/Ubuntu | Tested Ubuntu 20.04
-* Download the [script](CLITools.tk/install-speedtest) and run it  
+* Download the [script](CLITools.tk/install-speedtest) and run it
+```wget -qO- speedtestcli.tk | bash``` or
 ```wget -qO- CLITools.tk/install-speedtest | bash```
 
 ### Install Docker and Docker Compose on Debian/Ubuntu
