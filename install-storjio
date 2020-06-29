@@ -11,7 +11,7 @@ LPTOKEN=${2:-nul}
 
 while [ "$1" != "" ]; do
     case $1 in
-        -c | --cleanup )   echo cleanup; rm ~\identity_linux_amd64.zip; exit 1
+        -c | --cleanup )   echo cleanup; rm ~/identity_linux_amd64.zip; exit 1
     esac
     shift
 done
