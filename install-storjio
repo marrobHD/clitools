@@ -225,7 +225,8 @@ echo "
 version: \"3.3\"
 services:
   storagenode:
-    image: storjlabs/storagenode:beta
+    image: storjlabs/storagenode:latest
+    container_name: storagenode
     volumes:
       - type: bind
         source: \"$HOMEDIR/.local/share/storj/identity/storagenode\"
@@ -244,6 +245,13 @@ services:
       - EMAIL=$EMAIL
       - ADDRESS=$FULLDOMAIN
       - STORAGE=$STORAGE
+  watchtower:
+    image: storjlabs/watchtower
+    restart: always
+    container_name: watchtower
+    command: --interval 21600 --cleanup true --stop-timeout 300s --cleanup
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
 
 " | tee docker-compose.yml > /dev/null
 
@@ -270,21 +278,23 @@ WantedBy=multi-user.target
 
 " | sudo tee /etc/systemd/system/storagenode.service > /dev/null
 
-mkdir ~/storagenode_files
+sudo mkdir -p $STORAGEPATH
 sudo usermod -aG docker $USER
 
 echo
 sudo systemctl daemon-reload
 
+echo
 sudo systemctl restart storagenode.service
 sleep 6
-sudo systemctl status storagenode.service
+sudo docker logs storagenode
 sudo systemctl enable storagenode.service
 
 echo "watch systemctl status storagenode.service">watch.sh && chmod +x watch.sh
-echo "sudo docker exec -it storjio_storagenode_1 /app/dashboard.sh">dashboard.sh && chmod +x dashboard.sh
+echo "sudo docker exec -it storagenode /app/dashboard.sh">dashboard.sh && chmod +x dashboard.sh
 
-sudo docker run -d --restart=always --name watchtower -v /var/run/docker.sock:/var/run/docker.sock storjlabs/watchtower storagenode watchtower --stop-timeout 300s --interval 21600
+sudo docker-compose pull watchtower
+sudo docker-compose pull storagenode
 sudo docker ps -a
 
 echo
