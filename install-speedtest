@@ -154,8 +154,9 @@ echo "----------------------------------------------------------"
 #posh echo "You can close this now"
 #posh sleep 6
 
+
 function RunBashStuff {
-	echo "This script may won't work if you run without saving it. eg: wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh"; exit 1
+	echo "This script may won't work if you run without saving it. eg: wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh"
     eval "$(grep '^#bash' $0 | sed -e 's/^#bash //')"
 }
 
