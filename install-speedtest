@@ -1,89 +1,162 @@
+#Requires -RunAsAdministrator
 #!/bin/bash
-# How to use: wget -qO- CLITools.tk/install-speedtest | bash
-# or wget -qO- speedtestcli.tk | bash
-
-cd ~
-res1=$(date +%s.%N)
-
-
-
-echo
-echo
-echo Name:		Speedtest Installer
-echo Version:	0.0.2 - Stable
-echo Date:		30.06.2020
-echo Author:	TechHome/marrobhd
-echo Source:	info.clitools.tk
-echo
-echo
+# How to use:
+# Linux:
+# wget -qO- CLITools.tk/install-speedtest | bash
+# wget -qO- speedtestcli.tk | bash
+# Windows:
+# from cmd: powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1"""
+# from admin powershell: wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1
 
 
-echo Installation has been started
-echo ----------------------------------------------------------
-
-# Script only works if sudo caches the password for a few minutes
-sudo true
-
-if DISTRIBUTER=$(lsb_release -si); then
-    echo
-    echo
-else
-    echo Trying to fix errors...
-    sudo yum install redhat-lsb-core -y
-    apt-get install lsb-release -y
-    DISTRIBUTER=$(lsb_release -si)
-fi
-
-export DEB_DISTRO=$(lsb_release -sc)
-echo $DEB_DISTRO
-echo $DISTRIBUTER
-
-if [ "$DISTRIBUTER" == "Ubuntu" ]; then
-    echo $DISTRIBUTER
-    export DEB_DISTRO=bionic
-    sudo apt-get install gnupg1 apt-transport-https dirmngr -y
-    export INSTALL_KEY=379CE192D401AB61
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $INSTALL_KEY
-    echo "deb https://ookla.bintray.com/debian ${DEB_DISTRO} main" | sudo tee  /etc/apt/sources.list.d/speedtest.list
-    sudo apt-get update
-    # Other non-official binaries will conflict with Speedtest CLI
-    # Example how to remove using apt-get
-    # sudo apt-get remove speedtest-cli
-    sudo apt-get install speedtest -y
-elif [ "$DISTRIBUTER" == "Debian" ]; then
-    echo $DISTRIBUTER
-    apt-get install gnupg1 apt-transport-https dirmngr -y
-    export INSTALL_KEY=379CE192D401AB61
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $INSTALL_KEY
-    echo "deb https://ookla.bintray.com/debian ${DEB_DISTRO} main" | sudo tee  /etc/apt/sources.list.d/speedtest.list
-    apt-get update
-    # Other non-official binaries will conflict with Speedtest CLI
-    # Example how to remove using apt-get
-    # sudo apt-get remove speedtest-cli
-    apt-get install speedtest -y
-elif [ "$DISTRIBUTER" == "Fedora" ] || [ "$DISTRIBUTER" == "CentOS" ]; then
-    echo $DISTRIBUTER
-    sudo yum install wget -y
-    wget https://bintray.com/ookla/rhel/rpm -O bintray-ookla-rhel.repo
-    sudo mv bintray-ookla-rhel.repo /etc/yum.repos.d/
-    # Other non-official binaries will conflict with Speedtest CLI
-    # Example how to remove using yum
-    # rpm -qa | grep speedtest | xargs -I {} sudo yum -y remove {}
-    sudo yum install speedtest -y
-    exit
-fi
+echo ""
+echo ""
+echo "Name:		Speedtest Installer"
+echo "Version:	0.0.2 - Stable"
+echo "Date:		30.06.2020"
+echo "Author:	TechHome/marrobhd"
+echo "Source:	info.clitools.tk"
+echo ""
+echo ""
 
 
-echo
-echo ----------------------------------------------------------
-echo Finished!
-res2=$(date +%s.%N)
-dt=$(echo "$res2 - $res1" | bc)
-dd=$(echo "$dt/86400" | bc)
-dt2=$(echo "$dt-86400*$dd" | bc)
-dh=$(echo "$dt2/3600" | bc)
-dt3=$(echo "$dt2-3600*$dh" | bc)
-dm=$(echo "$dt3/60" | bc)
-ds=$(echo "$dt3-60*$dm" | bc)
-LC_NUMERIC=C printf "Total runtime: %d:%02d:%02d:%02.4f\n" $dd $dh $dm $ds
-echo
+echo "Installation has been started"
+echo "----------------------------------------------------------"
+
+# Bash code
+# --------------------
+#bash cd ~
+#bash res1=$(date +%s.%N)
+#bash 
+#bash # Script only works if sudo caches the password for a few minutes
+#bash sudo true
+#bash 
+#bash if DISTRIBUTER=$(lsb_release -si); then
+#bash     echo
+#bash     echo
+#bash else
+#bash     echo Trying to fix errors...
+#bash     sudo yum install redhat-lsb-core -y
+#bash     apt-get install lsb-release -y
+#bash     DISTRIBUTER=$(lsb_release -si)
+#bash 	OS=$(lsb_release -sd)
+#bash 	echo "Operating-System: $OS"
+#bash fi
+#bash 
+#bash export DEB_DISTRO=$(lsb_release -sc)
+#bash echo $DEB_DISTRO
+#bash echo $DISTRIBUTER
+#bash 
+#bash if [ "$DISTRIBUTER" == "Ubuntu" ]; then
+#bash     echo $DISTRIBUTER
+#bash     export DEB_DISTRO=bionic
+#bash     sudo apt-get install gnupg1 apt-transport-https dirmngr -y
+#bash     export INSTALL_KEY=379CE192D401AB61
+#bash     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $INSTALL_KEY
+#bash     echo "deb https://ookla.bintray.com/debian ${DEB_DISTRO} main" | sudo tee  /etc/apt/sources.list.d/speedtest.list
+#bash     sudo apt-get update
+#bash     # Other non-official binaries will conflict with Speedtest CLI
+#bash     # Example how to remove using apt-get
+#bash     # sudo apt-get remove speedtest-cli
+#bash     sudo apt-get install speedtest -y
+#bash elif [ "$DISTRIBUTER" == "Debian" ]; then
+#bash     echo $DISTRIBUTER
+#bash     apt-get install gnupg1 apt-transport-https dirmngr -y
+#bash     export INSTALL_KEY=379CE192D401AB61
+#bash     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $INSTALL_KEY
+#bash     echo "deb https://ookla.bintray.com/debian ${DEB_DISTRO} main" | sudo tee  /etc/apt/sources.list.d/speedtest.list
+#bash     apt-get update
+#bash     # Other non-official binaries will conflict with Speedtest CLI
+#bash     # Example how to remove using apt-get
+#bash     # sudo apt-get remove speedtest-cli
+#bash     apt-get install speedtest -y
+#bash elif [ "$DISTRIBUTER" == "Fedora" ] || [ "$DISTRIBUTER" == "CentOS" ]; then
+#bash     echo $DISTRIBUTER
+#bash     sudo yum install wget -y
+#bash     wget https://bintray.com/ookla/rhel/rpm -O bintray-ookla-rhel.repo
+#bash     sudo mv bintray-ookla-rhel.repo /etc/yum.repos.d/
+#bash     # Other non-official binaries will conflict with Speedtest CLI
+#bash     # Example how to remove using yum
+#bash     # rpm -qa | grep speedtest | xargs -I {} sudo yum -y remove {}
+#bash     sudo yum install speedtest -y
+#bash     exit
+#bash fi
+#bash
+#bash 
+#bash echo
+#bash echo ----------------------------------------------------------
+#bash echo Finished! Just run 'speedtest'
+#bash res2=$(date +%s.%N)
+#bash dt=$(echo "$res2 - $res1" | bc)
+#bash dd=$(echo "$dt/86400" | bc)
+#bash dt2=$(echo "$dt-86400*$dd" | bc)
+#bash dh=$(echo "$dt2/3600" | bc)
+#bash dt3=$(echo "$dt2-3600*$dh" | bc)
+#bash dm=$(echo "$dt3/60" | bc)
+#bash ds=$(echo "$dt3-60*$dm" | bc)
+#bash LC_NUMERIC=C printf "Total runtime: %d:%02d:%02d:%02.4f\n" $dd $dh $dm $ds
+#bash echo
+
+
+
+# PowerShell code
+# --------------------
+#posh Add-Type -AssemblyName System.IO.Compression.FileSystem
+#posh cd ~
+#posh $OS = (Get-WmiObject -class Win32_OperatingSystem).Caption | Out-String
+#posh echo "Operating-System: $OS"
+#posh 
+#posh # $stopwatch = [System.Diagnostics.Stopwatch]::StartNew() || echo "Please make sure, that you're running this in PowerShell!" && exit 1 -ErrorAction SilentlyContinue -EV Err -EA 
+#posh $stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
+#posh 
+#posh if($OS -match "Microsoft Windows"){
+#posh } else {
+#posh echo "Your Operating-System isn't 'Microsoft Windows'"
+#posh echo "exiting..."
+#posh exit
+#posh }
+#posh 
+#posh function changePath ($action, $addendum) {
+#posh     $regLocation = 
+#posh "Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment"
+#posh     $path = (Get-ItemProperty -Path $regLocation -Name PATH).path
+#posh 
+#posh     # Add an item to PATH
+#posh     if ($action -eq "add") {
+#posh         $path = "$path;$addendum"
+#posh         Set-ItemProperty -Path $regLocation -Name PATH -Value $path
+#posh     }
+#posh 
+#posh     # Remove an item from PATH
+#posh     if ($action -eq "remove") {
+#posh         $path = ($path.Split(';') | Where-Object { $_ -ne "$addendum" }) -join ';'
+#posh         Set-ItemProperty -Path $regLocation -Name PATH -Value $path
+#posh     }
+#posh }
+#posh 
+#posh wget https://bintray.com/ookla/download/download_file?file_path=ookla-speedtest-1.0.0-win64.zip -O ookla-speedtest-win64.zip
+#posh mkdir $env:COMMONPROGRAMFILES\Speedtest.net\
+#posh [System.IO.Compression.ZipFile]::ExtractToDirectory("$env:homepath\ookla-speedtest-win64.zip", "$env:COMMONPROGRAMFILES\Speedtest.net\")
+#posh changePath "remove" "$env:COMMONPROGRAMFILES\Speedtest.net\"
+#posh changePath "add" "$env:COMMONPROGRAMFILES\Speedtest.net\"
+#posh # remove envvar with changePath "remove" "$env:COMMONPROGRAMFILES\Speedtest.net\"
+#posh 
+#posh 
+#posh $stopwatch.Stop()
+#posh $elapsedSecods = $stopwatch.Elapsed.Seconds
+#posh echo ""
+#posh echo "----------------------------------------------------------"
+#posh echo "Finished! Just run 'speedtest'"
+#posh echo "Total runtime: $elapsedSecods seconds"
+#posh echo ""
+#posh rm speedtestcli.ps1
+#posh pause
+
+function RunBashStuff {
+    eval "$(grep '^#bash' $0 | sed -e 's/^#bash //')"
+}
+
+"RunBashStuff"
+"exit"
+
+((Get-Content $MyInvocation.MyCommand.Source) -match '^#posh ' -replace '^#posh ') -join "`n" | Invoke-Expression
