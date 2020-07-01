@@ -26,16 +26,22 @@ Installs a Storjio-Storagenode on Debian/Ubuntu | Tested Ubuntu 20.04
 ```wget -qO- CLITools.tk/install-storjio>install-storjio```
 * Make the script executable and run it ```chmod +x install-storjio; ./install-storjio STORJTOKEN LIVEPATCHTOKEN(optional)```
 
-### Install Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS
-Installs Speedtest.net CLI on Debian/Ubuntu | Tested Ubuntu 20.04
-* Download the [script](CLITools.tk/install-speedtest) and run it
+
+### Install Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS Windows
+Installs Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS Windows | Tested Ubuntu 20.04, Fedora, Windows 10
+* Linux: Download the [script](CLITools.tk/install-speedtest) and run it
 ```wget -qO- speedtestcli.tk | bash``` or
 ```wget -qO- CLITools.tk/install-speedtest | bash```
+* Windows: Download the [script](CLITools.tk/install-speedtest) and run it
+CMD:```powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1"""``` or
+Admin PS:```wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1```
+
 
 ### Install Docker and Docker Compose on Debian/Ubuntu
 Installs Docker Package CLI on Debian/Ubuntu | Tested Ubuntu 20.04
 * Download the [script](CLITools.tk/install-docker) and run it  
 ```wget -qO- CLITools.tk/install-docker | bash```
+
 
 ### Fully uninstall Docker and Docker Compose on Debian/Ubuntu
 Fully uninstalls Docker Package CLI on Debian/Ubuntu | Tested Ubuntu 20.04
