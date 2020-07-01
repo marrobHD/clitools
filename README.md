@@ -31,11 +31,11 @@ Installs a Storjio-Storagenode on Debian/Ubuntu | Tested Ubuntu 20.04
 Installs Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS Windows | Tested Ubuntu 20.04, Fedora, Windows 10
 #### Linux:
 ```shell
-wget -qO- speedtestcli.tk | bash
+wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh
 ```
 or
 ```shell
-wget -qO- CLITools.tk/install-speedtest | bash
+wget -qO- CLITools.tk/install-speedtest>st.sh; chmod +x st.sh; ./st.sh
 ```
 #### Windows:
 ##### CMD:
