@@ -40,7 +40,7 @@ wget -qO- CLITools.tk/install-speedtest | bash
 #### Windows:
 ##### CMD:
 ```shell
-shell powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1"""
+powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1"""
 ```
 ##### Admin PowerShell:
 ```shell
