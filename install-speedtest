@@ -2,8 +2,8 @@
 #!/bin/bash
 # How to use:
 # Linux:
-# wget -qO- CLITools.tk/install-speedtest | bash
-# wget -qO- speedtestcli.tk | bash
+# wget -qO- CLITools.tk/install-speedtest>st.sh; chmod +x st.sh; ./st.sh
+# wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh
 # Windows:
 # from cmd: powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1"""
 # from admin powershell: wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1
@@ -11,9 +11,9 @@
 
 echo ""
 echo ""
-echo "Name:		Speedtest Installer"
-echo "Version:	0.0.2 - Stable"
-echo "Date:		30.06.2020"
+echo "Name:		Speedtest.net CLI Installer"
+echo "Version:	0.0.3 - Stable"
+echo "Date:		01.07.2020"
 echo "Author:	TechHome/marrobhd"
 echo "Source:	info.clitools.tk"
 echo ""
@@ -39,8 +39,8 @@ echo "----------------------------------------------------------"
 #bash     sudo yum install redhat-lsb-core -y
 #bash     apt-get install lsb-release -y
 #bash     DISTRIBUTER=$(lsb_release -si)
-#bash 	OS=$(lsb_release -sd)
-#bash 	echo "Operating-System: $OS"
+#bash 	  OS=$(lsb_release -sd)
+#bash 	  echo "Operating-System: $OS"
 #bash fi
 #bash 
 #bash export DEB_DISTRO=$(lsb_release -sc)
@@ -155,7 +155,7 @@ echo "----------------------------------------------------------"
 #posh sleep 6
 
 function RunBashStuff {
-    eval "$(grep '^#bash' $0 | sed -e 's/^#bash //')"
+    eval "$(grep '^#bash' $0 | sed -e 's/^#bash //')" || echo "This script may won't work if you run without saving it. eg: wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh"; exit 1
 }
 
 "RunBashStuff"
