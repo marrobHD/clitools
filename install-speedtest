@@ -150,6 +150,7 @@ echo "----------------------------------------------------------"
 #posh echo "Total runtime: $elapsedSecods seconds"
 #posh echo ""
 #posh rm speedtestcli.ps1
+#posh rm \WINDOWS\System32\speedtestcli.ps1
 #posh pause
 
 function RunBashStuff {
