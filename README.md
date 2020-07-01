@@ -33,9 +33,13 @@ Installs Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS Windows | Tested Ubunt
 ```shell
 wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh
 ```
-or
+and
 ```shell
 wget -qO- CLITools.tk/install-speedtest>st.sh; chmod +x st.sh; ./st.sh
+```
+or
+```shell
+wget -qO- CLITools.tk/install-speedtest-lnx | bash
 ```
 #### Windows:
 ##### CMD:
