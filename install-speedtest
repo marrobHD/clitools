@@ -85,7 +85,7 @@ echo "----------------------------------------------------------"
 #bash 
 #bash echo
 #bash echo ----------------------------------------------------------
-#bash echo Finished! Just run 'speedtest'
+#bash echo Installed! Just run 'speedtest'
 #bash res2=$(date +%s.%N)
 #bash dt=$(echo "$res2 - $res1" | bc)
 #bash dd=$(echo "$dt/86400" | bc)
@@ -146,12 +146,13 @@ echo "----------------------------------------------------------"
 #posh $elapsedSecods = $stopwatch.Elapsed.Seconds
 #posh echo ""
 #posh echo "----------------------------------------------------------"
-#posh echo "Finished! Just run 'speedtest'"
+#posh echo "Installed! Just run 'speedtest'"
 #posh echo "Total runtime: $elapsedSecods seconds"
 #posh echo ""
 #posh rm speedtestcli.ps1
 #posh rm \WINDOWS\System32\speedtestcli.ps1
-#posh pause
+#posh echo "You can close this now"
+#posh sleep 6
 
 function RunBashStuff {
     eval "$(grep '^#bash' $0 | sed -e 's/^#bash //')"
