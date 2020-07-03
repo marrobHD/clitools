@@ -1,5 +1,5 @@
 # CLITools.tk
-📦Scripts for CLI📦
+📦Useful scripts for CLI📦
 
 
 [![License][license-shield]](LICENSE.md)
