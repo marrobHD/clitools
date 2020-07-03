@@ -1,5 +1,5 @@
 # CLITools.tk
-📦Scripts for CLI running under Debian/Ubuntu📦
+📦Scripts for CLI📦
 
 
 [![License][license-shield]](LICENSE.md)
