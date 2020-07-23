@@ -50,6 +50,15 @@ powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND w
 ```shell
 wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1
 ```
+***Note:***
+You may have to set the PowerShell execution-policy to remotesigned. Do it in admin PowerShell via:
+```shell
+set-executionpolicy remotesigned
+```
+After running the script you can go back to the default policy:
+```shell
+set-executionpolicy default
+```
 
 
 ### Install Docker and Docker Compose on Debian/Ubuntu
