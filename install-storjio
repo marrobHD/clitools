@@ -1,12 +1,12 @@
 #!/bin/bash
-# How to use: wget -qO- CLITools.tk/install-storjio>install-storjio && chmod +x install-storjio && ./install-storjio STORJTOKEN LIVEPATCHTOKEN(optional)
+# How to use: wget -qO- CLITools.tk/install-storjio>install-storjio && chmod +x install-storjio && ./install-storjio <email:characterstring> <LIVEPATCHTOKEN(optional)>
 # You can't directly wget it and run it with bash: wget xy | bash !
 # Don't run the script with sudo!
 cd ~
 res1=$(date +%s.%N)
 
 
-STORJTOKEN=${1?Format: ./install-storjio STORJTOKEN LIVEPATCHTOKEN(optional)}
+STORJTOKEN=${1?Format: ./install-storjio <email:characterstring> <LIVEPATCHTOKEN(optional)>}
 LPTOKEN=${2:-nul}
 
 while [ "$1" != "" ]; do
@@ -19,8 +19,8 @@ done
 
 echo
 echo
-echo Version:	0.0.2 - Stable
-echo Date:	01.07.2020
+echo Version:	0.0.3 - Stable
+echo Date:	10.01.2021
 echo Author:	TechHome/marrobhd
 echo Source:	info.clitools.tk
 echo
