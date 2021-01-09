@@ -24,7 +24,7 @@
 Installs a Storjio-Storagenode on Debian/Ubuntu | Tested Ubuntu 20.04
 * Download the [script](CLITools.tk/install-storjio)  
 ```wget -qO- CLITools.tk/install-storjio>install-storjio```
-* Make the script executable and run it ```chmod +x install-storjio; ./install-storjio STORJTOKEN LIVEPATCHTOKEN(optional)```
+* Make the script executable and run it ```chmod +x install-storjio; ./install-storjio <email:characterstring> <LIVEPATCHTOKEN(optional)>```
 
 
 ### Install Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS Windows
