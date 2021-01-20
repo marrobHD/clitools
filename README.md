@@ -27,7 +27,7 @@ Installs a Storjio-Storagenode on Debian/Ubuntu | Tested Ubuntu 20.04
 * Make the script executable and run it ```chmod +x install-storjio; ./install-storjio <email:characterstring> <LIVEPATCHTOKEN(optional)>```
 
 
-### Install Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS Windows
+### Install Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS/openSUSE Windows
 Installs Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS Windows | Tested Ubuntu 20.04, Fedora, Windows 10
 #### Linux:
 ```shell
