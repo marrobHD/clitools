@@ -8,7 +8,7 @@ echo ""
 echo ""
 echo "Name:		Speedtest.net CLI Installer Linux"
 echo "Version:	0.0.3 - Stable"
-echo "Date:		01.07.2020"
+echo "Date:		20.01.2021"
 echo "Author:	TechHome/marrobhd"
 echo "Source:	info.clitools.tk"
 echo ""
@@ -71,7 +71,7 @@ elif [ "$DISTRIBUTER" == "openSUSE" ]; then
     zypper install -y speedtest-cli bc
 elif [ "$DISTRIBUTER" == "Fedora" ] || [ "$DISTRIBUTER" == "CentOS" ]; then
     echo $DISTRIBUTER
-    sudo yum install wget -y
+    sudo yum install wget bc -y
     wget https://bintray.com/ookla/rhel/rpm -O bintray-ookla-rhel.repo
     sudo mv bintray-ookla-rhel.repo /etc/yum.repos.d/
     # Other non-official binaries will conflict with Speedtest CLI
