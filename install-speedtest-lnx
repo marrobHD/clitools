@@ -32,6 +32,7 @@ if DISTRIBUTER=$(lsb_release -si); then
 else
     echo Trying to fix errors...
     sudo yum install redhat-lsb-core -y
+    zypper install -y lsb-release
     apt-get install lsb-release -y
     DISTRIBUTER=$(lsb_release -si)
 	  OS=$(lsb_release -sd)
@@ -65,6 +66,9 @@ elif [ "$DISTRIBUTER" == "Debian" ]; then
     # Example how to remove using apt-get
     apt-get remove speedtest-cli
     apt-get install speedtest -y
+elif [ "$DISTRIBUTER" == "openSUSE" ]; then
+    echo $DISTRIBUTER
+    zypper install -y speedtest-cli bc
 elif [ "$DISTRIBUTER" == "Fedora" ] || [ "$DISTRIBUTER" == "CentOS" ]; then
     echo $DISTRIBUTER
     sudo yum install wget -y
