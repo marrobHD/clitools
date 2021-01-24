@@ -48,7 +48,8 @@ powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND s
 ```
 ##### Admin PowerShell:
 ```shell
-set-executionpolicy remotesigned; wget https://raw.githubusercontent.com/marrobHD/clitools/master/install-speedtest -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default```
+set-executionpolicy remotesigned; wget https://raw.githubusercontent.com/marrobHD/clitools/master/install-speedtest -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default
+```
 ***Note:***
 You may have to set the PowerShell execution-policy to remotesigned. Do it in admin PowerShell via:
 ```shell
