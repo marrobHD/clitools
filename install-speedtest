@@ -143,6 +143,7 @@ echo "----------------------------------------------------------"
 #posh [System.IO.Compression.ZipFile]::ExtractToDirectory("$env:homepath\ookla-speedtest-win64.zip", "$env:COMMONPROGRAMFILES\Speedtest.net\")
 #posh changePath "remove" "$env:COMMONPROGRAMFILES\Speedtest.net\"
 #posh changePath "add" "$env:COMMONPROGRAMFILES\Speedtest.net\"
+#posh [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Program Files\Common Files\Speedtest.net\", "USER")
 #posh # remove envvar with changePath "remove" "$env:COMMONPROGRAMFILES\Speedtest.net\"
 #posh 
 #posh 
