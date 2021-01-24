@@ -31,7 +31,7 @@ Installs a Storjio-Storagenode on Debian/Ubuntu | Tested Ubuntu 20.04
 Installs Speedtest.net CLI on Debian/Ubuntu/Fedora/CentOS Windows | Tested Ubuntu 20.04, Fedora, Windows 10
 #### Linux:
 ```shell
-wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh
+wget -qO- https://raw.githubusercontent.com/marrobHD/clitools/master/install-speedtest-lnx>st.sh; chmod +x st.sh; ./st.sh
 ```
 and
 ```shell
@@ -44,12 +44,11 @@ wget -qO- CLITools.tk/install-speedtest-lnx | bash
 #### Windows:
 ##### CMD:
 ```shell
-powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1"""
+powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND set-executionpolicy remotesigned; wget https://raw.githubusercontent.com/marrobHD/clitools/master/install-speedtest -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default; echo exit"""
 ```
 ##### Admin PowerShell:
 ```shell
-wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1
-```
+set-executionpolicy remotesigned; wget https://raw.githubusercontent.com/marrobHD/clitools/master/install-speedtest -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default```
 ***Note:***
 You may have to set the PowerShell execution-policy to remotesigned. Do it in admin PowerShell via:
 ```shell
