@@ -1,12 +1,20 @@
 #Requires -RunAsAdministrator
 #!/bin/bash
 # How to use:
+#
 # Linux:
 # wget -qO- CLITools.tk/install-speedtest>st.sh; chmod +x st.sh; ./st.sh
 # wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh
 # Windows:
-# from cmd: powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1"""
-# from admin powershell: wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1
+# from cmd: powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND set-executionpolicy remotesigned; wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default; echo exit"""
+# from admin powershell: set-executionpolicy remotesigned; wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default
+#
+# Only Github:
+# Linux:
+# wget -qO- https://raw.githubusercontent.com/marrobHD/clitools/master/install-speedtest>st.sh; chmod +x st.sh; ./st.sh
+# Windows:
+# from cmd: powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND set-executionpolicy remotesigned; wget https://raw.githubusercontent.com/marrobHD/clitools/master/install-speedtest -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default; echo exit"""
+# from admin powershell: set-executionpolicy remotesigned; wget https://raw.githubusercontent.com/marrobHD/clitools/master/install-speedtest -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default
 
 
 echo ""
@@ -14,8 +22,8 @@ echo ""
 echo "Name:		Speedtest.net CLI Installer"
 echo "Version:	0.0.3 - Stable"
 echo "Date:		20.01.2021"
-echo "Author:	TechHome/marrobhd"
-echo "Source:	info.clitools.tk"
+echo "Author:		TechHome/marrobhd"
+echo "Source:		info.clitools.tk"
 echo ""
 echo ""
 
