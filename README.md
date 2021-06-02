@@ -9,7 +9,6 @@
 [![Discord][discord-shield]][discord]
 ![Community Forum][forum-shield]
 
-[![Twitter][twitter]][twitter]
 [![Github][github]][github]
 
 <!-- 🎉 Release of CLITools 0.0.0 -->
@@ -107,5 +106,4 @@ check [the contributor's page][contributors].
 [maintenance-shield]: https://img.shields.io/badge/maintainer-Marlon-blue.svg?style=for-the-badge
 [releases-shield]: https://img.shields.io/github/release/marrobHD/clitools.svg?style=for-the-badge
 [releases]: https://github.com/marrobHD/clitools/releases
-[twitter]: https://img.shields.io/twitter/follow/TechxHome.svg?style=social
 [github]: https://img.shields.io/github/followers/marrobHD.svg?style=social
