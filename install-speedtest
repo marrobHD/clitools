@@ -164,7 +164,6 @@ echo "----------------------------------------------------------"
 #posh echo "Installed! Just run 'speedtest'"
 #posh echo "Total runtime: $elapsedSecods seconds"
 #posh echo ""
-#posh rm speedtestcli.ps1
 #posh rm \WINDOWS\System32\speedtestcli.ps1
 #posh echo "You can close this now"
 #posh sleep 6
