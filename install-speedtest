@@ -20,7 +20,7 @@
 echo ""
 echo ""
 echo "Name:		Speedtest.net CLI Installer"
-echo "Version:	0.0.4 - Stable"
+echo "Version:	0.0.6 - Stable"
 echo "Date:		23.04.2021"
 echo "Author:		TechHome/marrobhd"
 echo "Source:		info.clitools.tk"
@@ -55,7 +55,10 @@ echo "----------------------------------------------------------"
 #bash export DEB_DISTRO=$(lsb_release -sc)
 #bash echo $DEB_DISTRO
 #bash echo $DISTRIBUTER
-#bash 
+#bash
+#bash echo Removing old speedtest list
+#bash rm -f /etc/apt/sources.list.d/speedtest.list
+#bash
 #bash if [ "$DISTRIBUTER" == "Ubuntu" ]; then
 #bash     echo $DISTRIBUTER
 #bash     export DEB_DISTRO=bionic
