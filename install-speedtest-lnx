@@ -43,8 +43,12 @@ export DEB_DISTRO=$(lsb_release -sc)
 echo $DEB_DISTRO
 echo $DISTRIBUTER
 
-echo Removing old speedtest list
-rm -f /etc/apt/sources.list.d/speedtest.list
+if grep -c "^" /etc/apt/sources.list.d/speedtest.list | grep -q '1'; then
+	echo "Removing old speedtest list"
+	rm -f /etc/apt/sources.list.d/speedtest.list
+else
+	echo All good!
+fi
 
 if [ "$DISTRIBUTER" == "Ubuntu" ]; then
     echo $DISTRIBUTER
