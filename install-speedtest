@@ -3,8 +3,8 @@
 # How to use:
 #
 # Linux:
-# wget -qO- CLITools.tk/install-speedtest>st.sh; chmod +x st.sh; ./st.sh
-# wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh
+# wget -qO- CLITools.tk/install-speedtest>st.sh; chmod +x st.sh; sudo ./st.sh
+# wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; sudo ./st.sh
 # Windows:
 # from cmd: powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND set-executionpolicy remotesigned; wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default; echo exit"""
 # from admin powershell: set-executionpolicy remotesigned; wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default
@@ -20,8 +20,8 @@
 echo ""
 echo ""
 echo "Name:		Speedtest.net CLI Installer"
-echo "Version:	0.0.6 - Stable"
-echo "Date:		26.07.2021"
+echo "Version:	0.0.7 - Stable"
+echo "Date:		06.07.2021"
 echo "Author:		TechHome/marrobhd"
 echo "Source:		info.clitools.tk"
 echo ""
@@ -56,8 +56,12 @@ echo "----------------------------------------------------------"
 #bash echo $DEB_DISTRO
 #bash echo $DISTRIBUTER
 #bash
-#bash echo Removing old speedtest list
-#bash rm -f /etc/apt/sources.list.d/speedtest.list
+#bash if grep -c "^" /etc/apt/sources.list.d/speedtest.list | grep -q '1'; then
+#bash 	echo "Removing old speedtest list"
+#bash 	rm -f /etc/apt/sources.list.d/speedtest.list
+#bash else
+#bash	echo All good!
+#bash fi
 #bash
 #bash if [ "$DISTRIBUTER" == "Ubuntu" ]; then
 #bash     echo $DISTRIBUTER
