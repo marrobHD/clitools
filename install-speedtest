@@ -4,7 +4,7 @@
 #
 # Linux:
 # wget -qO- CLITools.tk/install-speedtest>st.sh; chmod +x st.sh; ./st.sh
-# wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; sudo ./st.sh
+# wget -qO- speedtestcli.tk>st.sh; chmod +x st.sh; ./st.sh
 # Windows:
 # from cmd: powershell -C "start-process -verb runAs "powershell" -argumentlist ""/COMMAND set-executionpolicy remotesigned; wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default; echo exit"""
 # from admin powershell: set-executionpolicy remotesigned; wget speedtestcli.tk -O speedtestcli.ps1; ./speedtestcli.ps1; set-executionpolicy default
