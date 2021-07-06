@@ -7,8 +7,8 @@
 echo ""
 echo ""
 echo "Name:		Speedtest.net CLI Installer Linux"
-echo "Version:	0.0.4 - Stable"
-echo "Date:		23.04.2021"
+echo "Version:	0.0.6 - Stable"
+echo "Date:		06.07.2021"
 echo "Author:	TechHome/marrobhd"
 echo "Source:	info.clitools.tk"
 echo ""
@@ -35,13 +35,16 @@ else
     zypper install -y lsb-release
     apt-get install lsb-release -y
     DISTRIBUTER=$(lsb_release -si)
-	  OS=$(lsb_release -sd)
-	  echo "Operating-System: $OS"
+    OS=$(lsb_release -sd)
+    echo "Operating-System: $OS"
 fi
 
 export DEB_DISTRO=$(lsb_release -sc)
 echo $DEB_DISTRO
 echo $DISTRIBUTER
+
+echo Removing old speedtest list
+rm -f /etc/apt/sources.list.d/speedtest.list
 
 if [ "$DISTRIBUTER" == "Ubuntu" ]; then
     echo $DISTRIBUTER
