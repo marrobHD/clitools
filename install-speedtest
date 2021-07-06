@@ -66,7 +66,7 @@ echo "----------------------------------------------------------"
 #bash if [ "$DISTRIBUTER" == "Ubuntu" ]; then
 #bash     echo $DISTRIBUTER
 #bash     export DEB_DISTRO=bionic
-#bash     #sudo apt-get install gnupg1 apt-transport-https dirmngr bc -y
+#bash     sudo apt-get install gnupg1 apt-transport-https dirmngr bc -y
 #bash     curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
 #bash     # Other non-official binaries will conflict with Speedtest CLI
 #bash     # Example how to remove using apt-get
@@ -74,7 +74,7 @@ echo "----------------------------------------------------------"
 #bash     sudo apt-get install speedtest -y
 #bash elif [ "$DISTRIBUTER" == "Debian" ]; then
 #bash     echo $DISTRIBUTER
-#bash     #apt-get install gnupg1 apt-transport-https dirmngr bc -y
+#bash     apt-get install gnupg1 apt-transport-https dirmngr bc -y
 #bash     curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash
 #bash     # Other non-official binaries will conflict with Speedtest CLI
 #bash     # Example how to remove using apt-get
