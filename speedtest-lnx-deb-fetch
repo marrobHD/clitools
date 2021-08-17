@@ -90,7 +90,7 @@ install_debian_keyring ()
 
 detect_os ()
 {
-  if [[ ( -z "${os}" ) && ( -z "${dist}" ) ]]; then
+  if [[ ( -z "${os+x}" ) && ( -z "${dist+x}" ) ]]; then
     # some systems dont have lsb-release yet have the lsb_release binary and
     # vice-versa
     if [ -e /etc/lsb-release ]; then
