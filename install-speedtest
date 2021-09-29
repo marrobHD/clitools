@@ -60,10 +60,10 @@ echo "----------------------------------------------------------"
 #bash 	echo "Removing old speedtest list"
 #bash 	rm -f /etc/apt/sources.list.d/speedtest.list
 #bash else
-#bash   echo All good!
+#bash   echo "No previous installation detected. Migration not needed!" 
 #bash fi
 #bash
-#bash if [ "$DISTRIBUTER" == "Ubuntu" ] || [ "$DISTRIBUTER" == "Zorin" ] || [ "$DISTRIBUTER" == "Debian" ]; then
+#bash if [ "$DISTRIBUTER" == "Ubuntu" ] || [ "$DISTRIBUTER" == "Zorin" ] || [ "$DISTRIBUTER" == "Raspbian" ] || [ "$DISTRIBUTER" == "Debian" ]; then
 #bash     echo $DISTRIBUTER
 #bash     export DEB_DISTRO=bionic
 #bash     sudo apt-get install gnupg1 apt-transport-https dirmngr bc -y
