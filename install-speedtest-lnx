@@ -54,7 +54,7 @@ if [ "$DISTRIBUTER" == "Ubuntu" ] || [ "$DISTRIBUTER" == "Zorin" ] || [ "$DISTRI
     echo $DISTRIBUTER
     export DEB_DISTRO=bionic
     sudo apt-get install gnupg1 apt-transport-https dirmngr bc -y
-    curl -s https://raw.githubusercontent.com/marrobHD/clitools/master/speedtest-lnx-deb-fetch | sudo bash
+    wget -qO- https://raw.githubusercontent.com/marrobHD/clitools/master/speedtest-lnx-deb-fetch | sudo bash
     # Other non-official binaries will conflict with Speedtest CLI
     # Example how to remove using apt-get
     sudo apt-get remove speedtest-cli
@@ -70,7 +70,7 @@ elif [ "$DISTRIBUTER" == "Fedora" ] || [ "$DISTRIBUTER" == "CentOS" ]; then
     # Other non-official binaries will conflict with Speedtest CLI
     # Example how to remove using yum
     # rpm -qa | grep speedtest | xargs -I {} sudo yum -y remove {}
-    curl -s https://install.speedtest.net/app/cli/install.rpm.sh | sudo bash
+    wget -qO- https://install.speedtest.net/app/cli/install.rpm.sh | sudo bash
     sudo yum install speedtest -y
 elif true; then
     echo $DISTRIBUTER
