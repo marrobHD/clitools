@@ -74,7 +74,7 @@ elif [ "$DISTRIBUTER" == "Fedora" ] || [ "$DISTRIBUTER" == "CentOS" ]; then
     sudo yum install speedtest -y
 elif true; then
     echo $DISTRIBUTER
-    sudo pkg update && sudo pkg install -g libidn2 ca_root_nss
+    sudo pkg update || echo "'$DISTRIBUTER' isn't listed in this script. Considering opening an issue on GitHub!"; exit && sudo pkg install -g libidn2 ca_root_nss
     # Example how to remove conflicting or old versions using pkg
     # sudo pkg remove speedtest
     sudo pkg add "https://install.speedtest.net/app/cli/ookla-speedtest-1.0.0-freebsd.pkg"
