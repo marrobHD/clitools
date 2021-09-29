@@ -88,7 +88,7 @@ echo "----------------------------------------------------------"
 #bash     exit
 #bash elif true; then
 #bash     echo $DISTRIBUTER
-#bash	  sudo pkg update && sudo pkg install -g libidn2 ca_root_nss
+#bash	  sudo pkg update || echo "'$DISTRIBUTER' isn't listed in this script. Considering opening an issue on GitHub!"; exit && sudo pkg install -g libidn2 ca_root_nss
 #bash	  # Example how to remove conflicting or old versions using pkg
 #bash	  # sudo pkg remove speedtest
 #bash	  sudo pkg add "https://install.speedtest.net/app/cli/ookla-speedtest-1.0.0-freebsd.pkg"
