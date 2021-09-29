@@ -47,10 +47,10 @@ if grep -c "^" /etc/apt/sources.list.d/speedtest.list | grep -q '1'; then
 	echo "Removing old speedtest list"
 	rm -f /etc/apt/sources.list.d/speedtest.list
 else
-	echo All good!
+	echo No previous installation detected!
 fi
 
-if [ "$DISTRIBUTER" == "Ubuntu" ] || [ "$DISTRIBUTER" == "Zorin" ] || [ "$DISTRIBUTER" == "Debian" ]; then
+if [ "$DISTRIBUTER" == "Ubuntu" ] || [ "$DISTRIBUTER" == "Zorin" ] || [ "$DISTRIBUTER" == "Raspbian" ] || [ "$DISTRIBUTER" == "Debian" ]; then
     echo $DISTRIBUTER
     export DEB_DISTRO=bionic
     sudo apt-get install gnupg1 apt-transport-https dirmngr bc -y
