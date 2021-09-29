@@ -67,7 +67,7 @@ echo "----------------------------------------------------------"
 #bash     echo $DISTRIBUTER
 #bash     export DEB_DISTRO=bionic
 #bash     sudo apt-get install gnupg1 apt-transport-https dirmngr bc -y
-#bash     curl -s https://raw.githubusercontent.com/marrobHD/clitools/master/speedtest-lnx-deb-fetch | sudo bash
+#bash     wget -qO- https://raw.githubusercontent.com/marrobHD/clitools/master/speedtest-lnx-deb-fetch | sudo bash
 #bash     # Other non-official binaries will conflict with Speedtest CLI
 #bash     # Example how to remove using apt-get
 #bash     sudo apt-get remove speedtest-cli
@@ -83,7 +83,7 @@ echo "----------------------------------------------------------"
 #bash     # Other non-official binaries will conflict with Speedtest CLI
 #bash     # Example how to remove using yum
 #bash     # rpm -qa | grep speedtest | xargs -I {} sudo yum -y remove {}
-#bash     curl -s https://install.speedtest.net/app/cli/install.rpm.sh | sudo bash
+#bash     wget -qO- https://install.speedtest.net/app/cli/install.rpm.sh | sudo bash
 #bash     sudo yum install speedtest -y
 #bash     exit
 #bash elif true; then
