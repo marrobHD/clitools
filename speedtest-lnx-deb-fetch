@@ -24,6 +24,7 @@ SUPPORTED=false
 [[ "${OS_RELEASE_ID}" == "debian" && "${OS_RELEASE_VERSION_ID}" == "9"     ]] && SUPPORTED=true
 [[ "${OS_RELEASE_ID}" == "debian" && "${OS_RELEASE_VERSION_ID}" == "10"    ]] && SUPPORTED=true
 [[ "${OS_RELEASE_ID}" == "debian" && "${OS_RELEASE_VERSION_ID}" == "11"    ]] && SUPPORTED=true
+[[ "${OS_RELEASE_ID}" == "raspbian" && "${OS_RELEASE_VERSION_ID}" == "11"  ]] && SUPPORTED=true
 
 [[ "${OS_RELEASE_ID}" == "zorin" && "${OS_RELEASE_VERSION_ID}" == "15"     ]] && SUPPORTED=true && os=ubuntu dist=focal
 [[ "${OS_RELEASE_ID}" == "zorin" && "${OS_RELEASE_VERSION_ID}" == "16"     ]] && SUPPORTED=true && os=ubuntu dist=focal
